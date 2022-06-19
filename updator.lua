@@ -22,7 +22,7 @@ local function download_files(path, local_directory)
     end
 end
 
-local core_path = "https://raw.githubusercontent.com/ShadyRetard/aimware_walkbot/master"
+local core_path = "https://raw.githubusercontent.com/Trollface7272/aimware_walkbot/master"
 local core_local_path = "walkbot"
 local core_version
 
@@ -41,7 +41,7 @@ if (walkbot.config == nil or core_version ~= online_core_version) then
     print( ('[walkbot Update] Core updating from "%s" to "%s"'):format(core_version, online_core_version) )
 end
 
-local data_path = "https://raw.githubusercontent.com/ShadyRetard/aimware_walkbot_data/master"
+local data_path = "https://raw.githubusercontent.com/Trollface7272/aimware_walkbot/master/data"
 local data_local_path = "walkbot\\data"
 local data_version
 
