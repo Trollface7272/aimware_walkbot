@@ -77,7 +77,7 @@ local function on_draw()
 end
 
 local function initialize()
-    sourcenav = RunScript(walkbot.config.modules_directory .. "\\sourcenav.lua")
+    sourcenav = loadstring(file.Read(walkbot.config.modules_directory .. "\\sourcenav.lua"))()
     callbacks.Register("Draw", "walkbot_map_manager_draw", on_draw)
 end
 

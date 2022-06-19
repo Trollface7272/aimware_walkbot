@@ -34,7 +34,8 @@ end
 
 local online_core_version = http.Get(core_path .. "/version.txt")
 
-walkbot.config = RunScript("walkbot\\modules\\config.lua")
+walkbot.config = loadstring(file.Read("walkbot\\modules\\config.lua"))()
+
 
 if (walkbot.config == nil or core_version ~= online_core_version) then
     download_files(core_path, core_local_path)

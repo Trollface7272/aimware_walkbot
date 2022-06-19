@@ -1,6 +1,6 @@
 -- Lua SourceNav parser by Sapphyrus (https://github.com/sapphyrus/sourcenav.lua)
 
-local struct = RunScript("walkbot\\modules\\struct.lua")
+local struct = loadstring(file.Read("walkbot\\modules\\struct.lua"))()
 
 local struct_buffer_mt = {
 	__index = {
