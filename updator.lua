@@ -34,7 +34,7 @@ end
 
 local online_core_version = http.Get(core_path .. "/version.txt")
 
-local success, configRaw = pcall(function() file.Read("walkbot\\modules\\config.lua") end)
+local success, configRaw = pcall(function() return file.Read("walkbot\\modules\\config.lua") end)
 
 walkbot.config = success and loadstring(configRaw)() or nill
 
